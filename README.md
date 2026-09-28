@@ -1,1 +1,1 @@
-# 24021932_DSA_Bui-Manh-Quan
+# 24021932_DSA_Bùi Mạnh Quân
