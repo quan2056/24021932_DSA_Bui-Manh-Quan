@@ -33,3 +33,19 @@ int main(){
     }
     return 0;
 }
+
+/*
+Do phuc tap thuat toan:
++ Theo thoi gian:
+- Ham swap: chi gom 3 phep gan co ban => do phuc tap O(1).
+- Ham sapxep: vong lap ben ngoai thuc hien n lan. Voi moi gia tri i cua vong lap ben ngoai vong lap ben trong luon 
+thuc hien so thao tac tu i+1 den n-1.
+=> Tong so thao thac la (n-1) + (n-2) + ... + 1 = n*(n-1)/2 = n^2/2 - n/2
+- Ma thuat toan khong co co che do ngat giua chung, nen ca 3 truong hop tot nhat, xau nhat, va trung binh deu co
+do phuc tap thuat toan la O(n^2)
+
++ Theo bo nho:
+- Cac thao tac sap xep chi thuc hien tren mang ban dau va chi su dung cac bien don le cung nhu mang co so phan tu
+la hang so (1000) nen do phuc tap thuat toan theo bo nho khong thay doi theo n.
+=> Do phuc tap thuat toan trong ca 3 truong hop xau nhat, tot nhat va trung binh la O(1).
+*/
