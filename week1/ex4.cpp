@@ -34,3 +34,12 @@ int main(){
     cout << "phan so a/b sau khi rut gon la: " << a << "/" << b;
     return 0;
 }
+
+/*
+Phan tich do phuc tap thuat toan:
+- Theo thoi gian: 
++ ham rutgon chi gom 1 lan goi ham ucln(a, b) va thuc hien cac phep so sanh, chia, gan gia tri don gian co do phuc tap O(1)
+=> thoi gian chay cua ham phu thuoc vao ham ucln(a, b)
+=> Ham ucln tim uoc chung lon nhat su dung thuat toan Euclid, phep chia lay du r = a % b lam gia tri cua b giam it nhat 1 nua 
+sau moi 2 buoc lap lien tiep
+*/
