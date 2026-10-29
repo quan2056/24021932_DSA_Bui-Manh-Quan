@@ -5,9 +5,7 @@ void selection_sort(int a[], int n){
             if(a[j] < a[min]) min = j;
        }
        if(min != i){
-            int temp = a[i];
-            a[i] = a[min];
-            a[min] = temp;
+            swap(a[i], a[min);
        }
     }
 }
