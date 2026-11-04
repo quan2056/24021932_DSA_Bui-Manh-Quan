@@ -1,44 +1,42 @@
 class List {
+public:
+    static const int N = 100;
+
 private:
-    static const int MAX = 10000;
-    int a[MAX];
-    int n;
+    int a[N];
+    bool used[N];
 
 public:
     List() {
-        n = 0;
+        for (int i = 0; i < N; i++) {
+            used[i] = false;
+        }
     }
 
-    // Them phan tu vao cuoi - O(1)
-    void add(int x) {
-        if (n == MAX) return;
+    //them phan tu: O(n)
+    void insert(int key, int h) {
+        for (int i = 0; i < N; i++) {
+            int pos = (h + i) % N;
 
-        a[n] = x;
-        n++;
+            if (!used[pos]) {
+                a[pos] = key;
+                used[pos] = true;
+                return;
+        }
+
+            if (a[pos] == key) return;
+        }
     }
 
-    // Lay hoac thay doi phan tu tai vi tri i - O(1)
-    int& get(int i) {
-        return a[i];
-    }
+    //tim kiem: O(n)
+    bool search(int key, int h) const {
+        for (int i = 0; i < N; i++) {
+            int pos = (h + i) % N;
 
-    // Lay phan tu khi doi tuong la const - O(1)
-    const int& get(int i) const {
-        return a[i];
-    }
+            if (!used[pos]) return false;
+            if (a[pos] == key) return true;
+        }
 
-    // So phan tu - O(1)
-    int size() const {
-        return n;
-    }
-
-    // Kiem tra rong - O(1)
-    bool isEmpty() const {
-        return n == 0;
-    }
-
-    // Kiem tra day - O(1)
-    bool isFull() const {
-        return n == MAX;
+        return false;
     }
 };
