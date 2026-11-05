@@ -7,10 +7,7 @@ void quick_sort(int a[], int l, int r) {
         while (a[j] > pivot) j--;
 
         if (i <= j) {
-            int temp = a[i];
-            a[i] = a[j];
-            a[j] = temp;
-
+            swap(a[i], a[j]);
             i++;
             j--;
         }
